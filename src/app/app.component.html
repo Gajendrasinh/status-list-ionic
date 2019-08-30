@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        <div>Simple List</div>
+        <div fxFlex style="margin:auto;"></div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+     <ion-list>
+
+       <ion-item lines="none"  *ngFor="let i of data; let index = index;" 
+  [class.alarm]="setAlarm(i.status)">
+        <ion-avatar slot="start">
+            <mat-icon mat-list-icon>home</mat-icon>
+        </ion-avatar>
+        <ion-label>
+          <h3 class="no-margin">{{ i.name }}</h3>
+          <p class="no-margin">{{ i.details }}</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content> 
+</ion-app>
